@@ -25,6 +25,9 @@ app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 
 app.get('*', async (req, res) => {
+
+    const body = req.body;
+    res.status(200).json(body);
     return;
 });
 
